@@ -4,6 +4,7 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="html-basic.css">
   <title>Document</title>
 </head>
 <body>
@@ -18,8 +19,8 @@
     <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aperiam, qui.</p>
     <a href="https://www.jd.com/">在新窗口打开京东</a>
     <a href="lushaqi577@163.com">点我发邮件</a>
-    <a href="#dibu">跳到页面底部</a>
-    <a href="." download>点我下载文件</a>
+    <a href="#bottom">跳到页面底部</a>
+    <a href="b.jpeg" download>点我下载文件</a>
     <br>
     <img src="./a.jpeg" width=200 height=200 alt="加载失败">
     <hr>
@@ -58,49 +59,62 @@
     <dl>
       <dt>班级</dt>
       <dd>三年二班</dd>
+
       <dt>老师</dt>
       <dd>张老师</dd>
       <dd>李老师</dd>
       <dd>王老师</dd>
+
       <dt>学生</dt>
       <dd>小明</dd>
       <dd>豆豆</dd>
     </dl>
     <hr>
     <h2>Google搜索</h2>
-    <input type="text">
-    <button target="_blank">在新窗口打开搜索结果</button>
-    <hr>
+    <form target="_blank" action="https://www.google.com.hk/search">
+      <input type="text" name="q">
+      <input type="hidden" name="ie" value="UTF-8">
+      <input type="hidden" name="sourceid" value="UTF">
+      <button>在新窗口打开搜索结果</button>
+    </form>
     <form action="">
       <p>个人信息调查表</p>
       <dl>
         <dt>性别</dt>
-        <dd><label for="1"><input type="radio" name="gender" id="1">男</label></dd>
-        <dd><label for="2"><input type="radio" name="gender" id="2">女</label></dd>
+        <dd><label><input type="radio" name="gender" id="1">男</label></dd>
+        <dd><label><input type="radio" name="gender" id="2">女</label></dd>
+
         <dt>年龄</dt>
         <dd>
           <select name="sel">
             <option value="1">请选择</option>
+
             <optgroup label="少年">
               <option value="1">1-6岁</option>
               <option value="2">6-12岁</option>
             </optgroup>
+
             <optgroup label="青年">
               <option value="1">13-15岁</option>
               <option value="2">16-18岁</option>
             </optgroup>
+
             <optgroup label="少年">
               <option value="1">1-6岁</option>
               <option value="2">6-12岁</option>
             </optgroup>
           </select>
         </dd>
+
         <dt>生日</dt>
         <dd><input type="date" value="2021-11-04"></dd>
+
         <dt>生辰</dt>
         <dd><input type="time"></dd>
+
         <dt>照片</dt>
         <dd><label for="file"><input type="file" id="file" hidden>点我上传照片，我比文件上传按钮好看</label></dd>
+
         <dt>自我介绍</dt>
         <dd><textarea cols="30" rows="10">&lt;/textarea&gt;</textarea></dd>
       </dl>
@@ -155,9 +169,9 @@
       </thead>
     </table>
     <hr>
-    <img usemap="#map1" src="./b.jpeg" width=300 height=450>
+    <img usemap="#map1" src="./b.jpeg" width=300>
     <map name="map1">
-      <area shape="rect" coords="8,588,307,141" href="https://global.jd.com/" alt="加载失败" target="_blank">
+      <area shape="rect" coords="8,748,307,299" href="https://global.jd.com/" alt="加载失败" target="_blank">
     </map>
     <hr>
       <a href="https://www.xiaomi.com/" target="iframe1">小米</a>
@@ -166,6 +180,7 @@
       <div>aaa&nbsp;&nbsp;&nbsp;&nbsp;bbbbb</div>
       <pre>aaa   bbbbb</pre>
     &gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&nbsp;&lt;span&gt;&lt;/span&gt;
+    <div id="bottom"></div>
   </div>
 </body>
 </html>
