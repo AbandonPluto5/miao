@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        .menu{
+            list-style: none;
+            background-color: black;
+            color: white;
+        }
+        .menu>li{
+            background-color: black;
+            display: inline-block;
+            margin: 0px 10px;
+            position: relative;
+        }
+        .menu li{
+            background-color: #272527;
+            position: relative;
+        }
+        .menu li li{
+            padding: 0px 100px 0px 10px;
+        }
+        .menu li:hover{
+            background-color: #2b57b7;
+        }
+        .menu ul{
+            display: none;
+            background-color: #272527;
+            position: absolute;
+            list-style: none;
+            white-space: nowrap;
+            border-radius: 0.3em;
+            box-shadow: 0 0 5px #333;
+        }
+        .menu li:hover>ul{
+            display: block;
+        }
+        .menu ul ul{
+            position: absolute;
+            left: 100%;
+            top:0;
+        }
+        /* .menu:hover ul{
+            display: block;
+        } */
+        /* .menu:hover ul ul{
+            display: none;
+        } */
+        /* .menu ul li:hover ul{
+            display: block;
+            position: absolute;
+            top: 0;
+            left: 100%;
+        } */
+        li:empty{
+            margin:0;
+            border: none;
+            border-top: #474747 2px solid;
+        }
+        li>span{
+            position: absolute;
+            right: 0;
+        }
+    </style>
+</head>
+<body>
+    <ul class="menu">
+        <li>Code
+            <ul>
+                <li>关于 Visual Studio Code</li>
+                <li>检查更新...</li>
+                <li></li>
+                <li>首选项<span>></span>
+                    <ul>
+                        <li>设置</li>
+                        <li>联机服务设置</li>
+                        <li>遥测设置</li>
+                        <li>扩展</li>
+                        <li></li>
+                        <li>键盘快捷方式[]</li>
+                        <li>从 - 中迁移键盘快捷方式...</li>
+                        <li></li>
+                        <li>配置用户代码片段</li>
+                        <li></li>
+                        <li>颜色主题</li>
+                        <li>文件图标主题</li>
+                        <li>产品图标主题</li>
+                        <li></li>
+                        <li>打开设置同步...</li>
+                    </ul>
+                </li>
+                <li></li>
+                <li>服务<span>></span>
+                    <ul>
+                        <li>Activity Monitor</li>
+                        <li>Allocation & Leaks</li>
+                        <li>File Activity</li>
+                        <li>System Trace</li>
+                        <li></li>
+                        <li>服务偏好设置...
+                            <ul>
+                                <li>12345</li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+                <li></li>
+                <li>隐藏 Visual Studio Code <span>CTRL H</span></li>
+                <li>隐藏其它<span>ALT CTRL H</span></li>
+                <li>全部显示</li>
+                <li></li>
+                <li>退出 Visual Studio Code <span>CTRL Q</span></li>
+            </ul>
+        </li>
+        <li>文件
+            <ul>
+                <li>新建文本文件</li>
+                <li>新建文件...</li>
+                <li>新建窗口</li>
+                <li></li>
+                <li>打开...</li>
+                <li>打开文件夹...</li>
+                <li>从文件打开工作区...</li>
+                <li>打开最近的文件
+                    <span>></span>
+                    <ul>
+                        <li>重新打开已关闭的编辑器</li>
+                        <li></li>
+                        <li>~/desktop</li>
+                        <li></li>
+                        <li>更多...</li>
+                        <li></li>
+                        <li>清除最近打开记录</li>
+                    </ul>
+                </li>
+                <li></li>
+                <li>从文件打开工作区...</li>
+                <li>将工作区另存为...</li>
+                <li>复制工作区</li>
+                <li></li>
+                <li>保存</li>
+                <li>另存为...</li>
+                <li>全部保存</li>
+                <li></li>
+                <li>自动保存</li>
+                <li></li>
+                <li>还原文件</li>
+                <li>关闭编辑器</li>
+                <li>关闭文件夹</li>
+                <li>关闭窗口</li>
+            </ul>
+        </li>
+        <li>编辑
+            <ul>
+                <li>撤销</li>
+                <li>恢复</li>
+                <li></li>
+                <li>剪切</li>
+                <li>复制</li>
+                <li>复制为
+                    <span>></span>
+                    <ul>
+                        <li>Copy remote file url</li>
+                        <li>Copy remote file url from...</li>
+                    </ul>
+                </li>
+                <li>粘贴</li>
+                <li></li>
+                <li>查找</li>
+                <li>替换</li>
+                <li></li>
+                <li>在文件中查找</li>
+                <li>在文件中替换</li>
+                <li></li>
+                <li>切换行注释</li>
+                <li>切换块注释</li>
+                <li>Emmet:展开缩写</li>
+                <li></li>
+                <li>开始听写...</li>
+                <li>表情符号</li>
+            </ul>
+        </li>
+        <li>选择
+            <ul>
+                <li>全选
+                    <span>Ctrl A</span>
+                </li>
+                <li>扩大选区
+                    <span>^up Ctrl ></span>
+                </li>
+                <li>缩小选区
+                    <span>^up Ctrl</span>
+                </li>
+                <li></li>
+                <li>向上复制一行</li>
+                <li>向下复制一行</li>
+                <li>向上移动一行</li>
+                <li>向下移动一行</li>
+                <li>重复选择</li>
+                <li></li>
+                <li>在上面添加光标</li>
+                <li>在下面添加光标</li>
+                <li>在行尾添加光标</li>
+                <li>添加下一个匹配项
+                    <span>Ctrl D</span>
+                </li>
+                <li>添加上一个匹配项</li>
+                <li>选择所有匹配项</li>
+                <li></li>
+                <li>切换为“Cmd+单机”进行多光标功能</li>
+                <li>列选择模式</li>
+            </ul>
+        </li>
+        <li>查看
+            <ul>
+                <li>命令面板...</li>
+                <li>打开视图...</li>
+                <li></li>
+                <li>外观
+                    <span>></span>
+                    <ul>
+                        <li>全屏</li>
+                        <li>禅模式</li>
+                        <li>居中布局</li>
+                        <li></li>
+                        <li>显示主侧栏</li>
+                        <li>显示辅助侧栏</li>
+                        <li>显示状态栏</li>
+                        <li>显示活动栏</li>
+                        <li>显示面板</li>
+                        <li></li>
+                        <li>向右移动主侧栏</li>
+                        <li>面板位置
+                            <span>></span>
+                            <ul>
+                                <li>底部</li>
+                                <li>右</li>
+                                <li>左</li>
+                            </ul>
+                        </li>
+                        <li>对齐面板
+                            <span>></span>
+                            <ul>
+                                <li>居中</li>
+                                <li>两端对齐</li>
+                                <li>右</li>
+                                <li>左</li>
+                            </ul>
+                        </li>
+                        <li></li>
+                        <li>放大</li>
+                        <li>缩小</li>
+                        <li>重置缩放</li>
+                    </ul>
+                </li>
+                <li>编辑器布局
+                    <span>></span>
+                    <ul>
+                        <li>向上拆分</li>
+                        <li>向下拆分</li>
+                        <li>向左拆分</li>
+                        <li>向右拆分</li>
+                        <li></li>
+                        <li>在组中拆分</li>
+                        <li></li>
+                        <li>单列</li>
+                        <li>双列</li>
+                        <li>三列</li>
+                        <li>双行</li>
+                        <li>三行</li>
+                        <li>2x2网格</li>
+                        <li>右侧双行</li>
+                        <li>底部双列</li>
+                        <li></li>
+                        <li>翻转布局</li>
+                    </ul>
+                </li>
+                <li></li>
+                <li>资源管理器</li>
+                <li>搜索</li>
+                <li>源代码管理</li>
+                <li>运行</li>
+                <li>扩展</li>
+                <li></li>
+                <li>问题</li>
+                <li>输出</li>
+                <li>调试控制台</li>
+                <li>终端</li>
+                <li></li>
+                <li>自动换行</li>
+                <li>显示缩略图</li>
+                <li>显示导航痕迹</li>
+                <li>显示空格</li>
+                <li>显示控制字符</li>
+            </ul>
+        </li>
+        <li>转到</li>
+        <li>运行</li>
+        <li>终端</li>
+        <li>窗口</li>
+        <li>帮助</li>
+    </ul>
+</body>
+</html>

@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        nav{
+            background-color: black;
+            width: 500px;
+        }
+        div{
+            display: inline-block;
+            margin-right: 15px;
+            color:white;
+            position: relative;
+        }
+        div ul{
+            display: none;
+        }
+        div:hover ul{
+            display: block;
+            width: 230px;
+            position: absolute;
+            top: 5px;
+            background-color: #282628;
+            list-style: none;
+            white-space: nowrap;
+            padding: 0;
+        }
+        li:hover{
+            background-color: #2b57b7;
+        }
+        div:hover ul li div{
+            display: none;
+        }
+        div:hover li:hover div{
+            display: block;
+            position: relative;
+            left: 230px;
+            top: -28px;
+            background-color: black;
+            list-style: none;
+            white-space: nowrap;
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <div>Code
+            <ul>
+                <li>关于 Visual Studio Code</li>
+                <li>首选项
+                    <div>
+                        <ul>
+                            <li>设置</li>
+                            <li>联机服务设置</li>
+                            <li>遥测设置</li>
+                            <li>扩展</li>
+                        </ul>
+                    </div>
+                </li>
+                <li>服务
+                    <div>
+                        <ul>
+                            <li>Activity Monitor</li>
+                            <li>服务偏好设置</li>
+                        </ul>
+                    </div>
+                </li>
+                <li>隐藏其它</li>
+                <li>全部显示</li>
+                <li>退出 Visual Studio Code</li>
+            </ul>
+        </div>
+        <div>文件
+            <ul>
+                <li>新建文本文件</li>
+                <li>打开文件夹</li>
+                <li>打开窗口</li>
+                <li>打开最近的文件
+                    <div>
+                        <ul>
+                            <li>重新打开被关闭的项目</li>
+                            <li>更多...</li>
+                        </ul>
+                    </div>
+                </li>
+            </ul>
+        </div>
+        <div>查看
+            <ul>
+                <li>命令面板</li>
+                <li>外观
+                    <div>
+                        <ul>
+                            <li>全屏</li>
+                            <li>放大</li>
+                            <li>缩小</li>
+                        </ul>
+                    </div>
+                </li>
+                <li>编辑器布局
+                    <div>
+                        <ul>
+                            <li>向下拆分</li>
+                            <li>单列</li>
+                        </ul>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </nav>
+</body>
+</html>
