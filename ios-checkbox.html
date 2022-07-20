@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        input{
+            display: none;
+        }
+        .lab{
+            display: inline-block;
+            width: 100px;
+            height: 50px;
+            background-color: #fff;
+            border: 2px solid white;
+            border-radius: 100px;
+            position: relative;
+            box-shadow: 0 0 5px;
+        }
+        .lab::before{
+            content: "";
+            display: inline-block;
+            position: absolute;
+            width: 50px;
+            height: 50px;
+            background-color: #fff;
+            border: 1px solid white;
+            border-radius: 30px;
+            transition: 0.5s;
+            box-shadow: 0 0 3px;
+        }
+        .che:checked + .lab{
+            background-color: #77f064;
+        }
+        .che:checked + .lab::before{
+            left: 50px;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <input type="checkbox" id="dd-input" class="che">
+        <label for="dd-input" class="lab"></label>
+    </div>
+</body>
+</html>
