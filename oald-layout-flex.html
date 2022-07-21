@@ -5,132 +5,114 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <style>
+    <style type="text/less">
         *{
+            margin: 0;
+            padding: 0;
             box-sizing: border-box;
         }
-        html{
-            width: 100%;
-            height: 100%;
-        }
         body{
-            margin: 0;
             width: 100%;
-            min-width: 930px;
             height: 100%;
         }
         div{
-            height: 100%;
-            position: relative;
-         }
-
+            display: flex;
+            flex-wrap: nowrap;
+            width: 100%;
+            height: 100vh;
+            min-width: 930px;
+        }
         /* 左 */
         aside.left{
+            display: flex;
+            flex-direction: column;
             width: 200px;
             background-color: #edc4cb;
             border: solid 1px;
-            position: absolute;
-            top: 0px;
-            bottom: 0px;
         }
         aside.left h1{
-            margin: 0;
             text-align: center;
-            height: 70px;
             line-height: 3;
         }
         aside.left input{
             width: 150px;
             height: 30px;
-            margin-left: 7px;
+        }
+        aside.left>div{
+            width: 200px;
+            height: auto;
+            padding: 5px;
         }
         aside.left button{
             width: 35px;
             height: 25px;
-            vertical-align: middle;
-            margin-left: -5px;
+            display: inline-block;
         }
-        aside.left ul{
+        .left>ul{
             width: 200px;
             list-style: none;
-            padding: 0;
-            margin: 0;
             overflow-y: auto;
-            position: absolute;
-            top: 100px;
-            bottom: 0px;
         }
         ul li{
             margin-left: 40px;
         }
-        ul li a{
+        ul a{
             text-decoration: none;
         }
-
-        /* 中 */
+        /* 中*/
         div.center{
+            display: flex;
+            flex-direction: column;
             min-width: 330px;
             background-color: #fdf8e1;
-            position: absolute;
-            top: 0px;
-            left: 200px;
-            right: 400px;
-            bottom: 0px;
             border: 1px solid;
         }
         .center h2{
+            width: 100%;
             line-height: 70px;
             padding: 20px;
-            margin: 0;
             border-bottom: solid 1px;
-            position: absolute;
-            top: 0px;
-            left: 0px;
-            right: 0px;
         }
         .center main{
-            position: absolute;
-            top: 110px;
-            bottom: 0px;
             padding: 20px;
             overflow-y: auto;
         }
 
         /* 右1 */
         aside.right_1{
+            display: flex;
+            flex-direction: column;
             width: 200px;
             background-color: #edc4cd;
             border: 1px solid;
             text-align: right;
-            padding-right: 15px;
-            position: absolute;
-            right: 200px;
-            top: 0px;
-            bottom: 0px;
+        }
+        aside.right_1>h2{
+            width: 200px;
         }
 
         /* 右2 */
         aside.right_2{
+            display: flex;
+            flex-direction: column;
             width: 200px;
             background-color: #edc4cd;
             border: 1px solid;
             text-align: right;
-            padding-right: 15px;
-            position: absolute;
-            right: 0px;
-            top: 0px;
-            bottom: 0px;
+        } 
+        aside.right_2>h2{
+            width: 100%;
         }
-      
-
     </style>
 </head>
 <body>
     <div>
         <aside class="left">
             <h1>OALD Se7en</h1>
+            <div>
             <input type="text">
             <button></button>
+            </div>
                 <ul>
                     <li><a href="">world1</a></li>
                     <li><a href="">world2</a></li>
@@ -205,5 +187,6 @@
             <h1>History</h1>
         </aside>
     </div>
+    <script src="less.js"></script>
 </body>
 </html>
