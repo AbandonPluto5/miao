@@ -1,0 +1,450 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style type="text/less">
+        body,html{
+            width: 100%;
+        }
+        /*table*/
+        .table{
+            caption-side: top;
+            width: 100%;
+            border-collapse:collapse;
+            text-align: left;
+            thead{
+                border-bottom: 2px solid;
+            }
+            th,td{
+            border-bottom: 1px solid #dfe2e6;
+            padding: 10px;
+        }
+        }
+        
+        /*table-striped*/
+        .table-striped{
+            caption-side: top;
+            margin-top: 40px;
+            width: 100%;
+            border-collapse: collapse;
+            text-align: left;
+            thead{
+                border-bottom: 2px solid;
+            }
+            th,td{
+                border-bottom: 1px solid #dfe2e6;
+                padding: 10px;
+            }
+            tbody tr:nth-child(1),tr:nth-child(3){
+                background-color: #f2f2f2;
+            }
+        }
+
+        /*table-sm*/
+        .table-sm{
+            caption-side: top;
+            margin-top: 40px;
+            width: 100%;
+            border-collapse:collapse;
+            text-align: left;
+            thead{
+                border-bottom: 2px solid;
+            }
+            th,td{
+                border-bottom: 1px solid #dfe2e6;
+                padding: 5px;
+        }
+        }
+
+        /*table-hover*/
+        .table-hover{
+            caption-side: top;
+            margin-top: 40px;
+            width: 100%;
+            border-collapse:collapse;
+            text-align: left;
+            thead{
+                border-bottom: 2px solid;
+            }
+            th,td{
+                border-bottom: 1px solid #dfe2e6;
+                padding: 10px;
+            }
+            tbody tr:hover{
+                background-color: #f2f2f2;
+            }
+        }
+        /*table-bordered*/
+        .table-bordered{
+            caption-side: top;
+            margin-top: 40px;
+            width: 100%;
+            border-collapse:collapse;
+            text-align: left;
+            thead{
+                border: 1px solid #dfe2e6;
+                border-bottom: 2px solid;
+            }
+            th,td{
+                border: 1px solid #dfe2e6;
+                padding: 10px;
+            }
+        }
+        /*table-borderless*/
+        .table-borderless{
+            caption-side: top;
+            margin-top: 40px;
+            width: 100%;
+            text-align: left;
+            thead{
+            }
+            th,td{
+                padding: 10px;
+            }
+        }
+        /*table-dark*/
+        .table-dark{
+            caption-side: top;
+            background-color: #222529;
+            text-align: left;
+            margin-top: 40px;
+            width: 100%;
+            color: white;
+            border-collapse: collapse;
+            thead{
+                border-bottom: 2px solid #ffffff;
+            }
+            tbody tr:hover{
+                background-color: #333539;
+            }
+            th,td{
+                border-bottom: 1px solid #dfe2e6;
+                padding: 10px;
+            }
+        }
+        /*table-active*/
+        /*table*/
+        .table-active{
+            caption-side: top;
+            margin-top: 40px;
+            width: 100%;
+            border-collapse:collapse;
+            text-align: left;
+            thead{
+                border-bottom: 2px solid;
+            }
+            tbody tr:nth-child(1),
+            tbody tr:last-child td:nth-child(2){
+                background-color: #e5e5e5;
+            }
+            th,td{
+            border-bottom: 1px solid #dfe2e6;
+            padding: 10px;
+            }
+        }
+        /*table-striped-columns*/
+        .table-striped-columns{
+            caption-side: top;
+            margin-top: 40px;
+            width: 100%;
+            border-collapse:collapse;
+            text-align: left;
+            thead{
+                border-bottom: 2px solid;
+            }
+            [scope="col"]{
+                background-color: #e5e5e5;
+            }
+            th,td{
+            border-bottom: 1px solid #dfe2e6;
+            padding: 10px;
+            }
+        }
+        caption{
+            font: bolder 24px black;
+        }
+        
+
+    </style>
+</head>
+<body>
+    <table class="table">
+        <caption>table</caption>
+        <thead>
+            <tr>
+                <th>#</th>
+                <th>First</th>
+                <th>Last</th>
+                <th>Handle</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <th>1</th>
+                <td>Mark</td>
+                <td>Otto</td>
+                <td>@mod</td>
+            </tr>
+            <tr>
+                <th>2</th>
+                <td>Jacob</td>
+                <td>Thornton</td>
+                <td>@fat</td>
+            </tr>
+            <tr>
+                <th>3</th>
+                <td>Larry th
+                <td></td>
+                <td>@twitter</td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table-striped">
+        <caption>table-striped</caption>
+        <thead>
+            <tr>
+                <th>#</th>
+                <th>First</th>
+                <th>Last</th>
+                <th>Handle</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <th>1</th>
+                <td>Mark</td>
+                <td>Otto</td>
+                <td>@mod</td>
+            </tr>
+            <tr>
+                <th>2</th>
+                <td>Jacob</td>
+                <td>Thornton</td>
+                <td>@fat</td>
+            </tr>
+            <tr>
+                <th>3</th>
+                <td>Larry th
+                <td></td>
+                <td>@twitter</td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table-sm">
+        <caption>table-sm</caption>
+        <thead>
+            <tr>
+                <th>#</th>
+                <th>First</th>
+                <th>Last</th>
+                <th>Handle</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <th>1</th>
+                <td>Mark</td>
+                <td>Otto</td>
+                <td>@mod</td>
+            </tr>
+            <tr>
+                <th>2</th>
+                <td>Jacob</td>
+                <td>Thornton</td>
+                <td>@fat</td>
+            </tr>
+            <tr>
+                <th>3</th>
+                <td>Larry th
+                <td></td>
+                <td>@twitter</td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table-hover">
+        <caption>table-hover</caption>
+        <thead>
+            <tr>
+                <th>#</th>
+                <th>First</th>
+                <th>Last</th>
+                <th>Handle</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <th>1</th>
+                <td>Mark</td>
+                <td>Otto</td>
+                <td>@mod</td>
+            </tr>
+            <tr>
+                <th>2</th>
+                <td>Jacob</td>
+                <td>Thornton</td>
+                <td>@fat</td>
+            </tr>
+            <tr>
+                <th>3</th>
+                <td>Larry th
+                <td></td>
+                <td>@twitter</td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table-bordered">
+        <caption>table-bordered</caption>
+        <thead>
+            <tr>
+                <th>#</th>
+                <th>First</th>
+                <th>Last</th>
+                <th>Handle</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <th>1</th>
+                <td>Mark</td>
+                <td>Otto</td>
+                <td>@mod</td>
+            </tr>
+            <tr>
+                <th>2</th>
+                <td>Jacob</td>
+                <td>Thornton</td>
+                <td>@fat</td>
+            </tr>
+            <tr>
+                <th>3</th>
+                <td colspan="2">Larry th</td>
+                <td>@twitter</td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table-borderless">
+        <caption>table-borderless</caption>
+        <thead>
+            <tr>
+                <th>#</th>
+                <th>First</th>
+                <th>Last</th>
+                <th>Handle</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <th>1</th>
+                <td>Mark</td>
+                <td>Otto</td>
+                <td>@mod</td>
+            </tr>
+            <tr>
+                <th>2</th>
+                <td>Jacob</td>
+                <td>Thornton</td>
+                <td>@fat</td>
+            </tr>
+            <tr>
+                <th>3</th>
+                <td colspan="2">Larry th</td>
+                <td>@twitter</td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table-dark">
+        <caption style="color: black;">table-dark</caption>
+        <thead>
+            <tr>
+                <th>#</th>
+                <th>First</th>
+                <th>Last</th>
+                <th>Handle</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <th>1</th>
+                <td>Mark</td>
+                <td>Otto</td>
+                <td>@mod</td>
+            </tr>
+            <tr>
+                <th>2</th>
+                <td>Jacob</td>
+                <td>Thornton</td>
+                <td>@fat</td>
+            </tr>
+            <tr>
+                <th>3</th>
+                <td colspan="2">Larry th</td>
+                <td>@twitter</td>
+            </tr>
+        </tbody>
+        
+        <table class="table-active">
+            <caption>table-active</caption>
+            <thead>
+                <tr>
+                    <th>#</th>
+                    <th>First</th>
+                    <th>Last</th>
+                    <th>Handle</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <th>1</th>
+                    <td>Mark</td>
+                    <td>Otto</td>
+                    <td>@mod</td>
+                </tr>
+                <tr>
+                    <th>2</th>
+                    <td>Jacob</td>
+                    <td>Thornton</td>
+                    <td>@fat</td>
+                </tr>
+                <tr>
+                    <th>3</th>
+                    <td colspan="2">Larry th</td>
+                    <td>@twitter</td>
+                </tr>
+            </tbody>
+    </table>
+    <table class="table-striped-columns">
+        <caption>table-striped-columns</caption>
+        <thead>
+            <tr>
+                <th>#</th>
+                <th scope="col">First</th>
+                <th>Last</th>
+                <th scope="col">Handle</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <th>1</th>
+                <td scope="col">Mark</td>
+                <td>Otto</td>
+                <td scope="col">@mod</td>
+            </tr>
+            <tr>
+                <th>2</th>
+                <td scope="col">Jacob</td>
+                <td>Thornton</td>
+                <td scope="col">@fat</td>
+            </tr>
+            <tr>
+                <th>3</th>
+                <td colspan="2" scope="col">Larry th</td>
+                <td>@twitter</td>
+            </tr>
+        </tbody>
+    </table>
+    <script src="less.js"></script>
+</body>
+</html>
